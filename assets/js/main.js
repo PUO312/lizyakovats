@@ -29,3 +29,44 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slider img');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentSlide = 0;
+
+    // Функция для отображения текущего слайда
+    const showSlide = (index) => {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    };
+
+    // Инициализация слайдера
+    const initSlider = () => {
+        showSlide(currentSlide);
+    };
+
+    // Обработчик для кнопки "влево"
+    prevBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    });
+
+    // Обработчик для кнопки "вправо"
+    nextBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    });
+
+    // Запуск слайдера
+    initSlider();
+});
+
