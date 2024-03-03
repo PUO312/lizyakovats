@@ -19,6 +19,8 @@ header {
     padding: 20px 0; 
 }
 
+
+
 .container {
     max-width: 1200px; 
     margin: 0 auto; 
@@ -26,7 +28,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} 
 
 .header-image {
     max-width: 100px; 
@@ -110,6 +112,14 @@ section {
     background: green;
     bottom: 0;
     left: calc(50% - 20px);
+}
+/*контейнер для надписей по первой строке и по центру*/
+
+ .containerPALEC {
+   width: 90%;
+   max-width: 1170px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 body {
