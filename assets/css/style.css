@@ -36,6 +36,7 @@ header {
     margin-bottom: 20px; 
     border-radius: 50%; 
     overflow: hidden; 
+    border: outset;
 }
 
 .header-text {
