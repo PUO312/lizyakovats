@@ -599,6 +599,42 @@ p {
     }
 }
 
+/* Для мобильных устройств */
+@media only screen and (max-width: 767px) {
+    .carousel-gallery {
+        margin: 30px 0; /* Уменьшаем верхний отступ */
+        padding: 0 15px; /* Уменьшаем отступы по бокам */
+    }
+
+    .swiper-slide {
+        height: 300px; /* Уменьшаем высоту слайдов */
+    }
+
+    .swiper-pagination-bullet {
+        height: 10px; /* Уменьшаем размер точек */
+        width: 10px;
+        margin: 0 3px; /* Уменьшаем отступ между точками */
+    }
+
+    .swiper-pagination-bullet-active {
+        height: 12px; /* Увеличиваем размер активной точки */
+        width: 12px;
+        margin-bottom: -1px;
+    }
+}
+
+/* Для планшетов и ноутбуков */
+@media only screen and (min-width: 768px) {
+    .carousel-gallery {
+        margin: 50px 0; /* Восстанавливаем верхний отступ */
+        padding: 0 30px; /* Восстанавливаем отступы по бокам */
+    }
+
+    .swiper-slide {
+        height: 500px; /* Восстанавливаем высоту слайдов */
+    }
+}
+
 
 /* низ */
 
