@@ -1,72 +1,43 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const btnUp = document.getElementById('btn-up');
-    let isHidden = true; // флаг, указывающий, что кнопка в данный момент скрыта
-  
-    function showBtnUp() {
-      if (window.scrollY > 100) {
-        btnUp.style.display = 'block';
-        setTimeout(function() {
-          btnUp.style.opacity = '1';
-        }, 10);
-        isHidden = false; // кнопка сейчас не скрыта
-      } else {
-        if (!isHidden) { // если кнопка была видимой
-          btnUp.style.opacity = '0';
-          setTimeout(function() {
-            btnUp.style.display = 'none';
-          }, 300);
-          isHidden = true; // кнопка снова скрыта
+(function () {
+  "use strict";
+
+  var carousels = function () {
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0
+        },
+        680: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+          loop: false
+        },
+        1000: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+          loop: true
         }
       }
-    }
-  
-    window.addEventListener('scroll', showBtnUp);
-  
-    btnUp.addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slider img');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let currentSlide = 0;
-
-    // Функция для отображения текущего слайда
-    const showSlide = (index) => {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.style.display = 'block';
-            } else {
-                slide.style.display = 'none';
-            }
-        });
-    };
-
-    // Инициализация слайдера
-    const initSlider = () => {
-        showSlide(currentSlide);
-    };
-
-    // Обработчик для кнопки "влево"
-    prevBtn.addEventListener('click', function() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
     });
 
-    // Обработчик для кнопки "вправо"
-    nextBtn.addEventListener('click', function() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
+    // Добавляем указатель кнопки ссылки при наведении на окошко
+    $(".swiper-container").on('mouseenter', '.swiper-slide', function () {
+      $(this).css('cursor', 'pointer');
     });
+  };
 
-    // Запуск слайдера
-    initSlider();
-});
-
+  carousels();
+})();
