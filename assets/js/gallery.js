@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
     var swiper = new Swiper('.carousel-gallery .swiper-container', {
         effect: 'slide',
         speed: 900,
