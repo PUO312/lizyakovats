@@ -2,140 +2,154 @@
 <html lang="en">
 
 <head>
-   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png">
-<link rel="manifest" href="assets/img/icons/site.webmanifest">
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>lizyakovats_psychologist</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/icons/site.webmanifest">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JS -->
     <script src="assets/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     
+    <!-- Vendor CSS Files -->
+ 
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+
+
 </head>
+
 <body>
+
+
+<!-- ======= Mobile nav toggle button ======= -->
+
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+  <nav id="navbar" class="navbar nav-menu">
+    <ul>
+      <li><a href="#home" class="nav-link scrollto active"><i class="bi bi-house-door-fill"></i> <span>Главная</span></a></li>
+      <li><a href="#session" class="nav-link scrollto"><i class="bi bi-cash-coin"></i> <span>Услуги</span></a></li>
+      <li><a href="#writeme" class="nav-link scrollto"><i class="bi bi-pencil-square"></i> <span>Написать</span></a></li>
+      <li><a href="#soc" class="nav-link scrollto"><i class="bi bi-share"></i> <span>Соц. сети</span></a></li>
+      <li><a href="#photo" class="nav-link scrollto"><i class="bi bi-image"></i> <span>Галерея</span></a></li>
+    </ul>
+  </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
 
     <div class="container">
         <img src="assets/img/ava.jpg" alt="mama" class="avatar">
-        <h1 class="header-text">lizyakovats_psychologist</h1> 
+        <h1 class="header-text">lizyakovats_psychologist</h1>
     </div>
 
-    <div class="description">
-        <h2>Психоаналитический психотерапевт. Мастер рэйки. Тета-хиллер. Рисую нейрографику под ваш запрос. Провожу трансформационные сессии. Помогаю изменить свою реальность. Опыт работы с 1997 г. </h2>
+
+    <div class="description" id="home">
+        <h2>Врач. Психотерапевт. Регрессолог. Тета-хилер. Биоэнергокоррекция человека и его пространства интерьерными картинами. Опыт работы с 1997г.  </h2>
     </div>
 
     <div class="containerPALEC">
-        <div><p>👉Психоаналитический научно-обоснованный подход. </p></div>
-        <div><p>👉Мягкое и лёгкое погружение в работу на сессии благодаря созданию индивидуального безопасного пространства.</p></div>
-        <div><p>👉Просмотр и проработка сценариев рода и предыдущих реинкарнаций, мешающих переходу в желаемую реальность.</p></div>
-        <div><p>👉Перепрошивка нейронных связей через тета-загрузки и нейрографику.</p></div>
+        <div>
+            <p>👉Психоаналитический научно-обоснованный подход. </p>
+        </div>
+        <div>
+            <p>👉Мягкое и лёгкое погружение в работу на сессии благодаря созданию индивидуального безопасного пространства.</p>
+        </div>
+        <div>
+            <p>👉Просмотр и проработка сценариев рода и предыдущих реинкарнаций, мешающих переходу в желаемую реальность.</p>
+        </div>
+        <div>
+            <p>👉Интерьерная картина под ваш запрос - срок выполнения индивидуален и зависит от размера холста.</p>
+        </div>
     </div>
 
-   <!--#<div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up" id="session">
         <div class="section-title">
             <h2>Что входит в сессию</h2>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-4">
-                <div class="column" id ='one'>
-                    <h3>О проведении сессии<hr></h3>
-                    <p>💥Сессии проводятся очно и онлайн.</p>
-                    <p>💥Длительность сессии колеблется от 30 минут до 3 часов и зависит от способности клиента воспринимать информацию и её эффективно перерабатывать.</p>
-                    <p>💥 Длительность диагностической сессии для знакомства и понимания моего метода работы 30 мин.</p>
-                    <p>💥 Длительность сессии с нейрографикой 1,5−2 часа. Рисую для вас по вашему запросу для наиболее лёгкой, быстрой и экологичной реализации запроса во время трансформационной сессии.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="column" id ='two'>
-                    <h3>Что вы получаете в результате работы со мной<hr></h3>
-                    <p>💫Поймёте себя;</p>
-                    <p>💫Осознаете свои реальные потребности и желания;</p>
-                    <p>💫Увидите, где свернули с дороги своего истинного пути;</p>
-                    <p>💫Найдёте своё предназначение и миссию души;</p>
-                    <p>💫Оставите позади недовольство собой и своей жизнью;</p>
-                    <p>💫 Начнёте мыслить конструктивно и действовать.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="column" id ='three'>
-                    <h3>Стоимость трансформационной сессии<hr></h3>
-                    <p>Стоимость и количество сессий зависят от уровня вашего запроса и уровня вашей готовности к действиям для его реализации. Я лишь проводник к желаемой новой действительности. Делать реальные решительные шаги и действия для достижения задуманного вам самим.</p>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-            <h2>Что входит в сессию</h2>
-        </div>
-        </div>
-   <div class="gtco-testimonials">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5>О проведении сессии
-            </h5>
-                       <p class="card-text">💥Сессии проводятся очно и онлайн.</p>
-                     <p class="card-text">💥Длительность сессии колеблется от 30 минут до 3 часов и зависит от способности клиента воспринимать информацию и её эффективно перерабатывать.</p>
-                     <p class="card-text">💥Длительность диагностической сессии для знакомства и понимания моего метода работы 30 мин.</p>
-                     <p class="card-text">💥Длительность сессии с нейрографикой 1,5−2 часа. Рисую для вас по вашему запросу для наиболее лёгкой, быстрой и экологичной реализации запроса во время трансформационной сессии.</p>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5>Что вы получаете в результате работы со мной
-            </h5>
-                     <p class="card-text">💥Поймёте себя;</p>
-                     <p class="card-text">💥Осознаете свои реальные потребности и желания.</p>
-                     <p class="card-text">💥Увидите, где свернули с дороги своего истинного пути.</p>
-                     <p class="card-text">💥Найдёте своё предназначение и миссию души.</p>
-                     <p class="card-text">💥Оставите позади недовольство собой и своей жизнью.</p>
-              <p class="card-text">💥Начнёте мыслить конструктивно и действовать.</p>
-                
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5>Стоимость трансформационной сессии</h5>
- <p class="card-text">💥Стоимость и количество сессий зависят от уровня вашего запроса и уровня вашей готовности к действиям для его реализации. </p>
-          <p class="card-text">💥Я лишь проводник к желаемой новой действительности. Делать реальные решительные шаги и действия для достижения задуманного вам самим.</p>
-          </div>
-        </div>
-      </div>
     </div>
-    
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</div>
+    <div class="gtco-testimonials">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5>О проведении сессии
+                            </h5>
+                            <p class="card-text">💥Сессии проводятся очно и онлайн.</p>
+                            <p class="card-text">💥Длительность сессии колеблется от 30 минут до 3 часов и зависит от способности клиента воспринимать информацию и её эффективно перерабатывать.</p>
+                            <p class="card-text">💥Длительность диагностической сессии для знакомства и понимания моего метода работы 15 мин.</p>
+                            <p class="card-text">💥Длительность сессии с нейрографикой 1,5−2 часа. Рисую для вас по вашему запросу для наиболее лёгкой, быстрой и экологичной реализации запроса во время трансформационной сессии.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5>Стоимость трансформационной сессии</h5>
+                            <p class="card-text">💥Стоимость картины зависит от её размера и вашего запроса.  </p>
+                            <p class="card-text">💥Материалы, которые я использую в работе: холст на подрамнике (100% лен), текстурная паста, акрил, лак. </p>
+                            <p class="card-text">💥Предоплата обязательна (сумма материалов, рассчитывается индивидуально).</p>
+                             <p class="card-text">💥Я лишь проводник к желаемой новой действительности. Делать реальные решительные шаги и действия для достижения задуманного вам самим.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5>Что вы получаете в результате работы со мной
+                            </h5>
+                            <p class="card-text">💥Поймёте себя.</p>
+                            <p class="card-text">💥Осознаете свои реальные потребности и желания.</p>
+                            <p class="card-text">💥Увидите, где свернули с дороги своего истинного пути.</p>
+                            <p class="card-text">💥Найдёте своё предназначение и миссию души.</p>
+                            <p class="card-text">💥Оставите позади недовольство собой и своей жизнью.</p>
+                            <p class="card-text">💥Начнёте мыслить конструктивно и действовать.</p>
 
-<script src="assets/js/sessions.js"></script>
-   
-    <div class="container" data-aos="fade-up">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <div class="container" data-aos="fade-up" id="writeme">
         <div class="section-title">
             <h2>Начни новую жизнь с чистого листа</h2>
         </div>
@@ -156,13 +170,10 @@
         </div>
     </div>
 
-    <div class="btn-up btn-up_hide" id="btn-up">
-        <img src="assets/img/icons/buttonup.png" alt="Вверх">
-    </div>
 
-    <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up" id="soc">
         <div class="section-title">
-            <h2>Мои соц. сети</h2>
+            <h2>Соц. сети</h2>
         </div>
         <div class="social-media-container">
             <div class="social-media-icons">
@@ -172,145 +183,160 @@
             </div>
         </div>
     </div>
-    
-   <!--Carousel Gallery-->
-<div class="carousel-gallery">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="assets/img/1.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/1.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="assets/img/2.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/2.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-             <div class="swiper-slide">
-                <a href="assets/img/3.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/3.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="assets/img/4.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/4.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-             <div class="swiper-slide">
-                <a href="assets/img/5.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/5.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="assets/img/6.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/6.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-             <div class="swiper-slide">
-                <a href="assets/img/7.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/7.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="assets/img/8.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/8.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-             <div class="swiper-slide">
-                <a href="assets/img/9.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/9.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="assets/img/10.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/10.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-             <div class="swiper-slide">
-                <a href="assets/img/11.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/11.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="assets/img/12.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/12.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
-             <div class="swiper-slide">
-                <a href="assets/img/13.jpg" data-fancybox="gallery">
-                    <div class="image" style="background-image: url(assets/img/13.jpg)">
-                        <div class="overlay">
-                            <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                    </div>
-                </a>
-            </div>
+
+    <div class="container" data-aos="fade-up" id="photo">
+        <div class="section-title">
+            <h2>Галлерея</h2>
         </div>
-        <div class="swiper-pagination"></div>
     </div>
-</div>
-<!--#Carousel Gallery-->
-    <script src="assets/js/gallery.js"></script>
-   
-    <div class="copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                        <div class="copyright-text">
-                            <p>&copy; 2023, All Right Reserved <a href="https://t.me/PUO312">PUO</a></p>
+    <!--Carousel Gallery-->
+    <div class="carousel-gallery">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="assets/img/1.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/1.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
                         </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/2.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/2.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/3.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/3.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/4.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/4.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/5.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/5.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/6.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/6.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/7.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/7.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/8.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/8.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/9.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/9.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/10.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/10.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/11.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/11.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/12.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/12.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/13.jpg" data-fancybox="gallery">
+                        <div class="image" style="background-image: url(assets/img/13.jpg)">
+                            <div class="overlay">
+                                <em class="mdi mdi-magnify-plus"></em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy; 2023, All Right Reserved <a href="https://t.me/PUO312">PUO</a></p>
                     </div>
                 </div>
+            </div>
+        </div>
     </div>
+    <div class="btn-up btn-up_hide" id="btn-up">
+        <img src="assets/img/icons/buttonup.png" alt="Вверх">
     </div>
-</body>
-</html>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/gallery.js"></script>
+      <script src="assets/js/sessions.js"></script>
+      <!--  JQuery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--  JQuery-UI  -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><!--  JQuery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body></html>

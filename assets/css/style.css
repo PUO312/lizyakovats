@@ -14,12 +14,6 @@ body {
     box-sizing: border-box;
 }
 
-header {
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 20px 0;
-}
-
 
 
 .container {
@@ -184,6 +178,11 @@ body {
     background-color: LightCyan;
 }
 
+a:hover {
+  color: #067ded;
+  text-decoration: none;
+}
+
 /*.text-container {
   height: 100vh;
   width: 100vw;
@@ -328,38 +327,204 @@ p {
     margin: 20px;
 }
 
-/* Кнопка вверх */
-.btn-up {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 15px;
+  overflow-y: auto;
 }
 
-.btn-up img {
-    width: 40px;
-    height: 40px;
+@media (max-width: 991px) {
+  #header {
+    width: 300px;
+    background: #fff;
+    border-right: 1px solid #e6e9ec;
+    left: -300px;
+  }
 }
 
-.btn-up:hover {
-    opacity: 0.7;
+@media (min-width: 991px) {
+  #main {
+    margin-left: 100px;
+  }
 }
 
-.btn-up_hide {
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+@media (min-width: 992px) {
+  .mobile-nav-toggle {
+    display: none; /* Скрываем кнопку переключения на устройствах с шириной экрана 992px и больше */
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.nav-menu {
+  padding: 0;
+  display: block;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #45505b;
+  padding: 10px 18px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+  border-radius: 50px;
+  background: #f2f3f5;
+  height: 56px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 20px;
+}
+
+.nav-menu a span,
+.nav-menu a:focus span {
+  padding: 0 5px 0 7px;
+  color: #45505b;
+}
+
+@media (min-width: 992px) {
+  .nav-menu a,
+  .nav-menu a:focus {
+    width: 56px;
+  }
+
+  .nav-menu a span,
+  .nav-menu a:focus span {
     display: none;
+    color: #fff;
+  }
 }
 
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  color: #fff;
+  background: green;
+}
+
+.nav-menu a:hover span,
+.nav-menu .active span,
+.nav-menu .active:focus span,
+.nav-menu li:hover>a span {
+  color: #fff;
+}
+
+.nav-menu a:hover,
+.nav-menu li:hover>a {
+  width: 100%;
+  color: #fff;
+}
+
+.nav-menu a:hover span,
+.nav-menu li:hover>a span {
+  display: block;
+}
+
+
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active #header {
+  left: 0;
+}
+
+.mobile-nav-active .mobile-nav-toggle {
+  color: #fff !important; /* Добавлено !important для обеспечения приоритета */
+  background-color: #0563bb !important; /* Добавлено !important для обеспечения приоритета */
+}
+
+.mobile-nav-toggle i {
+  color: #45505b;
+}
+
+/* Добавьте правило для .mobile-nav-toggle без класса .mobile-nav-active */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 0;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 5px;
+}
 
 /* о сессиях */
 .gtco-testimonials {
   position: relative;
   margin-top: 30px;
+  overflow-x: hidden; /* Заменяем 'auto' на 'hidden' для предотвращения прокрутки */
 
   .swiper-wrapper {
     padding: 30px 0;
-   
+    display: flex; /* Используем flex-контейнер для слайдов */
+  }
+
+  .swiper-slide {
+    flex: 0 0 auto; /* Определяем размер слайдов без возможности изменения */
   }
 
   .swiper-button-prev,
@@ -368,21 +533,19 @@ p {
   }
 
   .swiper-pagination {
-        position: relative;
-        bottom: auto;
-        text-align: center;
-        margin-top: 25px;
-      
+    position: relative;
+    bottom: auto;
+    text-align: center;
+    margin-top: 25px;
 
     .swiper-pagination-bullet {
       position: relative;
-    height: 12px; /* Уменьшаем высоту точек */
-    width: 12px; /* Уменьшаем ширину точек */  
+      height: 12px;
+      width: 12px;
       border-radius: 50%;
       display: inline-block;
-      background: #777; /* Серый цвет для неактивных точек */
-      margin: 0 10px; /* Увеличиваем отступ между точками и слайдами */
-        
+      background: #777;
+      margin: 0 10px;
     }
 
     .swiper-pagination-bullet-active {
@@ -397,46 +560,43 @@ p {
   .card {
     background: #fff;
     box-shadow: 0 8px 30px -7px #c9dff0;
-    margin: 0 20px;
     padding: 0 10px;
     border-radius: 20px;
-    border: 0;
+    margin: 0 20px; /* Уменьшаем отступы для увеличения ширины контейнера */
+  }
 
-    .card-img-top {
-      max-width: 100px;
-      border-radius: 50%;
-      margin: 15px auto 0;
-      box-shadow: 0 8px 20px -4px #d63031;
-      width: 100px;
-      height: 100px;
-    }
+  .card-img-top {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 15px auto 0;
+    box-shadow: 0 8px 20px -4px #d63031;
+    width: 100px;
+    height: 100px;
+  }
 
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-   
-    }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
-    h5 {
-      color: green;
-      font-size: 21px;
-      line-height: 1.2;
+  h5 {
+    color: green;
+    font-size: 21px;
+    line-height: 1.2;
 
-      span {
-        font-size: 18px;
-        color: #666666;
-      }
-    }
-
-    p {
+    span {
       font-size: 18px;
-      color: #555;
-     padding-bottom: -5px; /* Уменьшаем отступ между абзацами */
-        
+      color: #666666;
     }
+  }
+
+  p {
+    font-size: 18px;
+    color: #555;
+    padding-bottom: -5px;
   }
 
   .active {
@@ -463,7 +623,6 @@ p {
   }
 }
 
-/* Отображение на мобильных устройствах */
 @media only screen and (max-width: 767px) {
   .gtco-testimonials {
     margin-top: 20px;
@@ -492,23 +651,22 @@ p {
 }
 
 
-/*Carousel Gallery*/
+
 .carousel-gallery {
     margin: 50px 0;
     padding: 0 30px;
-    overflow: hidden; /* Добавляем overflow: hidden для предотвращения выхода последних слайдов за пределы контейнера */
+    overflow: hidden; 
+    justify-content: center;
 
     .swiper-slide {
         a {
             display: block;
-            width: 100%;
-            height: 500px;
+            width: 85%;
+            height: 45vh;
             border-radius: 4px;
             overflow: hidden;
             position: relative;
-
             box-shadow: 0 8px 30px -7px #c9dff0;
-
 
             &:hover {
                 .image {
@@ -518,11 +676,14 @@ p {
                 }
             }
 
-            .image {
+             .image {
                 width: 100%;
                 height: 100%;
                 background-size: cover;
                 background-position: center center;
+                display: flex;
+                align-items: center; 
+                justify-content: center; 
 
                 .overlay {
                     width: 100%;
@@ -530,9 +691,6 @@ p {
                     background-color: rgba(20, 20, 20, .8);
                     text-align: center;
                     opacity: 0;
-
-                    -webkit-transition: all .2s linear;
-                    -o-transition: all .2s linear;
                     transition: all .2s linear;
 
                     em {
@@ -540,9 +698,6 @@ p {
                         font-size: 26px;
                         position: relative;
                         top: 50%;
-                        -webkit-transform: translateY(-50%);
-                        -ms-transform: translateY(-50%);
-                        -o-transform: translateY(-50%);
                         transform: translateY(-50%);
                         display: inline-block;
                     }
@@ -558,23 +713,23 @@ p {
         margin-top: 25px;
 
         .swiper-pagination-bullet {
-    position: relative;
-    height: 12px; /* Задает высоту точки */
-    width: 12px; /* Задает ширину точки */
-    border-radius: 50%;
-    display: inline-block;
-    background-color: #777; /* Цвет точек */
-    margin: 0 5px;
-}
+            position: relative;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #777;
+            margin: 0 5px;
+        }
 
-           .swiper-pagination-bullet-active {
-      box-shadow: none;
-      background: green;
-      height: 12px;
-      width: 12px;
-      margin-bottom: -1px;
+        .swiper-pagination-bullet-active {
+            box-shadow: none;
+            background: green;
+            height: 12px;
+            width: 12px;
+            margin-bottom: -1px;
+        }
     }
-  }
 }
 
 
@@ -602,36 +757,25 @@ p {
 /* Для мобильных устройств */
 @media only screen and (max-width: 767px) {
     .carousel-gallery {
-        margin: 30px 0; /* Уменьшаем верхний отступ */
-        padding: 0 15px; /* Уменьшаем отступы по бокам */
+        margin: 30px 0;
+        padding: 0 15px;
     }
 
     .swiper-slide {
-        height: 300px; /* Уменьшаем высоту слайдов */
-    }
-
-    .swiper-pagination-bullet {
-        height: 10px; /* Уменьшаем размер точек */
-        width: 10px;
-        margin: 0 3px; /* Уменьшаем отступ между точками */
-    }
-
-    .swiper-pagination-bullet-active {
-        height: 12px; /* Увеличиваем размер активной точки */
-        width: 12px;
-        margin-bottom: -1px;
+        width: calc(100% - 30px); /* Устанавливаем ширину так, чтобы было 15px отступа по бокам */
+        height: auto;
     }
 }
 
 /* Для планшетов и ноутбуков */
 @media only screen and (min-width: 768px) {
     .carousel-gallery {
-        margin: 50px 0; /* Восстанавливаем верхний отступ */
-        padding: 0 30px; /* Восстанавливаем отступы по бокам */
+        margin: 50px 0;
+        padding: 0 30px;
     }
 
     .swiper-slide {
-        height: 500px; /* Восстанавливаем высоту слайдов */
+        width: calc(33.333% - 30px); /* Устанавливаем ширину так, чтобы было 30px отступа по бокам */
     }
 }
 
@@ -650,4 +794,27 @@ p {
 
 .copyright-text p a {
     color: #ff5e14;
+}
+
+/* Кнопка вверх */
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.btn-up img {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-up:hover {
+    opacity: 0.7;
+}
+
+.btn-up_hide {
+    display: none;
 }
