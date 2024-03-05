@@ -97,4 +97,17 @@
 
 })()
 
+var altezzaTot = 0;
 
+function fixWindow(){
+  altezzaTot = $(document).outerHeight() - $(window).outerHeight();
+}
+window.onresize = fixWindow;
+fixWindow();
+
+$(window).scroll(function (event) {
+  var scroll = $(document).scrollTop();
+  var per = Math.floor((100 * scroll) / altezzaTot);
+  
+  $(".progress").css("width", per + "%")
+});
