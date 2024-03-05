@@ -128,7 +128,7 @@ section {
 
 .section-title {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
 }
 
 .section-title h2 {
@@ -136,7 +136,7 @@ section {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     position: relative;
     color: #45505b;
 }
@@ -660,9 +660,9 @@ p {
     }
 }
 
+/* галерея */
 
-
-.carousel-gallery {
+/* .carousel-gallery {
     margin: 50px 0;
     padding: 0 30px;
     overflow: hidden;
@@ -790,21 +790,24 @@ p {
         /* Устанавливаем ширину так, чтобы было 30px отступа по бокам */
     }
 }
-
+*/
 
 /* низ */
 
 .copyright-area {
-    padding: 25px 0;
+    padding: 25px 0; /* Отступы сверху и снизу */
 }
 
-.copyright-text p {
-    margin: 0;
-    font-size: 14px;
-    color: #878787;
+.copyright-text {
+    margin-top: 50px; /* Увеличиваем отступ сверху */
 }
 
-.copyright-text p a {
+/* Дополнительные стили */
+.copyright-tex p {
+    margin: 0; /* Убираем внутренние отступы для абзацев */
+}
+
+a {
     color: #ff5e14;
 }
 
