@@ -6,6 +6,7 @@ body {
     /* Изменил размер базового шрифта для лучшей читаемости */
     line-height: 1.6;
     color: #333;
+    overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
 }
 
 *,
@@ -83,7 +84,7 @@ a.avatar {
 }
 
 .description h2 {
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .description p {
@@ -98,6 +99,7 @@ h2 {
     text-align: center;
     color: #333333;
     margin-bottom: 50px;
+      
 }
 
 h3 {

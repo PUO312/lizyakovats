@@ -111,3 +111,4 @@ $(window).scroll(function (event) {
   
   $(".progress").css("width", per + "%")
 });
+

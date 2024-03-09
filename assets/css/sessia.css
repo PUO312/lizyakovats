@@ -1,0 +1,239 @@
+.fancybox__container {
+  --fancybox-bg: #27272a;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(100px, 30vw, 300px) 46px;
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.fancybox__container.is-opening {
+  --f-transition-duration: 0.25s;
+  --f-transition-easing: ease-out;
+  --f-transition-delay: 0.1s;
+}
+
+.fancybox__container.is-closing {
+  --f-transition-duration: 0.1s;
+}
+
+.fancybox__toolbar {
+  --f-button-color: #fff;
+  --f-button-hover-color: #fff;
+  --f-button-bg: #000;
+  --f-button-hover-bg: #333;
+  --f-button-active-bg: #444;
+
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+
+  background: #000;
+}
+
+.fancybox__caption {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+
+  height: 100%;
+  overflow: hidden;
+
+  padding: 1rem 1.5rem;
+  background: #18181b;
+}
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 8px; /* Добавляем отступ между изображениями */
+}
+.img-container a {
+    margin-right: 8px; /* Добавляем отступ между изображениями в строке */
+}
+
+/* Задаем размер изображений и заполняем их контейнеры */
+.img-container a img {
+    width: 200px; /* Ширина контейнера */
+    height: 150px; /* Высота контейнера */
+    object-fit: cover; /* Заполнение изображения контейнером */
+    border-radius: 20px;
+}
+
+/* Общие стили для слайдера */
+.swiper-container1 {
+    width: 100%;
+    height: auto;
+}
+.swiper-wrapper1 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 767px) {
+    .img-container {
+        display: none; /* Скрываем на мобильных устройствах */
+    }
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 767px) {
+    .desktop {
+        display: none; /* Скрываем слайдер для ПК */
+    }
+}
+
+/* Стили для ПК */
+@media (min-width: 768px) {
+    .mobile {
+        display: none; /* Скрываем слайдер для мобильных устройств */
+    }
+}
+
+
+.gtco-testimonials1 {
+    position: relative;
+    margin-top: 0px;
+    overflow-x: hidden;
+    /* Заменяем 'auto' на 'hidden' для предотвращения прокрутки */
+
+    .swiper-wrapper {
+        padding: 0px 0;
+        display: flex;
+        /* Используем flex-контейнер для слайдов */
+    }
+
+    .swiper-slide {
+        flex: 0 0 auto;
+        /* Определяем размер слайдов без возможности изменения */
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        bottom: auto;
+        text-align: center;
+        margin-top: 10px;
+
+        .swiper-pagination-bullet {
+            position: relative;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            background: #777;
+            margin: 0 10px;
+        }
+
+        .swiper-pagination-bullet-active {
+            box-shadow: none;
+            background: green;
+            height: 12px;
+            width: 12px;
+            margin-bottom: -1px;
+        }
+    }
+
+ .card1 {
+    background: LightCyan; /* Цвет фона */
+    padding-top: 7px; /* Отступ сверху */
+    padding-right: 0; /* Отступ справа */
+    padding-bottom: 0; /* Отступ снизу */
+    padding-left: 0; /* Отступ слева */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+     
+}
+
+
+    .card-img-top1 {
+        max-width: 100px;
+        border-radius: 50%;
+        margin: 0px;
+        margin-bottom: 0; /* Убираем отступ снизу */
+        width: 100px;
+        height: 100px;
+    }
+  .card-body1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+  
+
+    h5 {
+        color: green;
+        font-size: 21px;
+        line-height: 1.2;
+
+        span {
+            font-size: 18px;
+            color: #666666;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        color: #555;
+        padding-bottom: -5px;
+    }
+
+    .active {
+        opacity: 0.5;
+        transition: all 0.3s;
+    }
+
+    .center {
+        opacity: 1;
+
+        h5 {
+            font-size: 24px;
+
+            span {
+                font-size: 20px;
+            }
+        }
+
+        .card-img-top1 {
+            max-width: 100%;
+            height: 120px;
+            width: 120px;
+            margin: 30px auto 0;
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .gtco-testimonials1 {
+        margin-top: 20px;
+    }
+
+    .gtco-testimonials1 .swiper-pagination {
+        margin-top: 15px;
+    }
+
+    .gtco-testimonials1 .card1 {
+        margin: 0 10px;
+    }
+
+    .gtco-testimonials1 .card1 .card-img-top1 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .gtco-testimonials1 .card1 h5 {
+        font-size: 18px;
+    }
+
+    .gtco-testimonials1 .card1 p {
+        font-size: 14px;
+    }
+}
+
+
+
