@@ -443,8 +443,8 @@ body.compensate-for-scrollbar {
 .fancybox-caption {
     background: linear-gradient(0deg, rgba(0, 0, 0, .85) 0, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .15) 65%, rgba(0, 0, 0, .075) 75.5%, rgba(0, 0, 0, .037) 82.85%, rgba(0, 0, 0, .019) 88%, transparent);
     bottom: 0;
-    color: #eee;
-    font-size: 15px;
+    color: #d6cbcb;
+    font-size: 20px;
     font-weight: 400;
     left: 0;
     line-height: 1.5;
@@ -454,7 +454,7 @@ body.compensate-for-scrollbar {
     text-align: center;
     z-index: 99996
         margin-top: 10px; /* Пример отступа в 10 пикселей сверху */
-    text-transform: uppercase;
+    
 }
 
 @supports (padding:max(0px)) {
@@ -851,7 +851,9 @@ body.compensate-for-scrollbar {
 /* Стили для мобильных устройств */
 @media only screen and (max-width: 576px) {
     .fancybox-caption {
-        color: #fff; /* Цвет текста на мобильных устройствах */
+        color: #d6cbcb; /* Цвет текста на мобильных устройствах */
+        font-size: 18px;
+        margin-top: 100px;
     }
 }
 
