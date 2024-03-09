@@ -176,7 +176,6 @@ body.compensate-for-scrollbar {
     position: relative;
     text-align: left;
     vertical-align: middle
-        
 }
 
 .fancybox-slide--image .fancybox-content {
@@ -452,9 +451,9 @@ body.compensate-for-scrollbar {
     pointer-events: none;
     right: 0;
     text-align: center;
-    z-index: 99996
-        margin-top: 10px; /* Пример отступа в 10 пикселей сверху */
-    
+    z-index: 99996 margin-top: 10px;
+    /* Пример отступа в 10 пикселей сверху */
+
 }
 
 @supports (padding:max(0px)) {
@@ -851,7 +850,8 @@ body.compensate-for-scrollbar {
 /* Стили для мобильных устройств */
 @media only screen and (max-width: 576px) {
     .fancybox-caption {
-        color: #d6cbcb; /* Цвет текста на мобильных устройствах */
+        color: #d6cbcb;
+        /* Цвет текста на мобильных устройствах */
         font-size: 18px;
         margin-top: 100px;
     }
@@ -862,4 +862,3 @@ body.compensate-for-scrollbar {
         margin-bottom: 145px;
     }
 }
-
